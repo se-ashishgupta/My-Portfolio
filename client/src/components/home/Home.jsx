@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { animate, motion } from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import { animate, motion, useMotionValue, useTransform } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
 import Work from "./Work";
@@ -8,30 +8,35 @@ import Services from "./Services";
 import About from "./About";
 
 const Home = ({ user }) => {
-  const projectCount = useRef(0);
-  const animationProjectCount = () => {
-    animate(0, 12, {
-      duration: 1,
-      // onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
-    });
+  const projectCount = useMotionValue(0);
+  const rounded = useTransform(projectCount, (latest) => Math.round(latest));
+
+  const slideRightVariants = {
+    initial: { x: "-100%", opacity: 0 },
+    whileInView: { x: 0, opacity: 1 },
   };
 
-  const animation = {
-    h1: {
-      initial: { x: "-100%", opacity: 0 },
-      whileInView: { x: 0, opacity: 1 },
-    },
-    button: {
-      initial: { y: "-100%", opacity: 0 },
-      whileInView: { y: 0, opacity: 1 },
-    },
+  const slideRightTransition = {
+    duration: 1,
+    ease: "easeInOut",
   };
+
+  useEffect(() => {
+    const contorls = animate(projectCount, user.projects.length, {
+      duration: 1,
+    });
+    return contorls.stop;
+  }, []);
+
   return (
     <>
       <div id="home">
         <section>
           <div>
-            <motion.h1 {...animation.h1}>
+            <motion.h1
+              {...slideRightVariants}
+              transition={slideRightTransition}
+            >
               Hi, I'm <br />
               {`${user.fname} ${user.lname}`}
             </motion.h1>
@@ -59,13 +64,7 @@ const Home = ({ user }) => {
             <aside>
               <article>
                 <p>
-                  +
-                  <motion.span
-                    whileInView={animationProjectCount}
-                    ref={projectCount}
-                  >
-                    12
-                  </motion.span>
+                  +<motion.span>{rounded}</motion.span>
                 </p>
                 <span>Projects Done</span>
               </article>
