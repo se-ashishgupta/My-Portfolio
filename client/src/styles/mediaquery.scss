@@ -1,0 +1,699 @@
+@media screen and (max-width: 1367px) {
+  nav {
+    padding: 0 $p_md;
+  }
+
+  //Home Section
+  #home {
+    height: 100vh;
+    > section {
+      &:first-of-type {
+        padding-left: $p_md;
+        > div {
+          aside {
+            width: 85%;
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    padding: 3rem $p_md;
+    > section {
+      &:last-of-type {
+        > p {
+          padding: 1.5rem 0;
+        }
+        > a {
+          padding: 0.8rem 1.2rem;
+        }
+      }
+    }
+  }
+
+  #work {
+    > section {
+      .workItem {
+        > aside {
+          > p {
+            margin: 1rem;
+          }
+          > a {
+            margin: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #testimonial {
+    padding: 3rem $p_md;
+    > section {
+      width: 100%;
+    }
+  }
+
+  #contact {
+    > form {
+      > input,
+      > button {
+        font: 400 0.8rem $text1;
+        width: 50%;
+      }
+    }
+  }
+
+  //About Section
+  .qualifications {
+    padding: 0 $p_md;
+  }
+  //About Section
+
+  //Footer Section
+  .footer {
+    padding: 0 $p_md;
+  }
+
+  //Login Section
+  .login {
+    padding: 4rem $p_md;
+  }
+
+  //Contact Us Section
+  .contact {
+    > section {
+      padding: 4rem $p_md;
+    }
+  }
+}
+@media screen and (max-width: 1100px) {
+  nav {
+    padding: 0 $p_base;
+    > div {
+      &:first-of-type {
+        gap: 1rem;
+      }
+      &:last-of-type {
+        > a > button {
+          padding: 0.5rem 1.4rem;
+        }
+      }
+    }
+  }
+  #home {
+    height: 110vh;
+    > section {
+      &:first-of-type {
+        padding-left: $p_base;
+        > div {
+          > h1 {
+            font: 900 3rem $text1;
+          }
+          aside {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    padding: 4rem $p_base;
+    gap: 4rem;
+
+    > section {
+      &:first-of-type {
+        > img {
+          width: 40vmax;
+          height: 40vmax;
+        }
+      }
+      &:last-of-type {
+        > h3 {
+          padding: 0.6rem 0;
+          color: $primary_color_1;
+        }
+
+        > p {
+          padding: 1.3rem 0;
+          letter-spacing: 0;
+          line-height: 130%;
+        }
+        > a {
+          padding: 0.6rem 1rem;
+          font: 500 1rem $text1;
+        }
+      }
+    }
+  }
+
+  #work {
+    padding: 4rem $p_base;
+    > section {
+      .workItem {
+        height: 30vmax;
+      }
+    }
+  }
+
+  #services {
+    padding: 4rem $p_base_inverse;
+    text-align: center;
+  }
+
+  //About Section
+  .qualifications {
+    padding: 0 $p_base;
+  }
+  //Footer Section
+  .footer {
+    padding: 0 $p_base;
+  }
+
+  //Login Section
+
+  .login {
+    padding: 4rem $p_base;
+  }
+
+  //Contact Us Section
+  .contact {
+    > section {
+      padding: 4rem $p_base;
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  nav {
+    padding: 0 $p_sm;
+    > h2 {
+      font-size: 1.6rem;
+    }
+    > div {
+      &:first-of-type {
+        gap: 0.6rem;
+      }
+      &:last-of-type {
+        > a > button {
+          padding: 0.5rem 0.6rem;
+        }
+      }
+    }
+  }
+  #home {
+    > section {
+      &:first-of-type {
+        padding-left: $p_sm;
+        > div {
+          > div {
+            gap: 2rem;
+            width: 100%;
+          }
+          aside {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+  .about {
+    padding: 4rem $p_base;
+    gap: 4rem;
+
+    > section {
+      &:first-of-type {
+        > img {
+          width: 40vmax;
+          height: 40vmax;
+        }
+      }
+      &:last-of-type {
+        > h3 {
+          padding: 0.5rem 0;
+          color: $primary_color_1;
+        }
+        > h2 {
+          font-size: 1.4rem;
+        }
+
+        > p {
+          padding: 1.1rem 0;
+          line-height: 120%;
+        }
+        > a {
+          padding: 0.6rem 1rem;
+          font: 500 0.8rem $text1;
+        }
+      }
+    }
+  }
+
+  #work {
+    padding: 5rem $p_sm;
+    > section {
+      .workItem {
+        height: 35vmax;
+      }
+    }
+  }
+
+  #services {
+    padding: 5rem $p_sm;
+    height: 100vh;
+  }
+
+  #testimonial {
+    padding: 5rem $p_sm;
+    > h2 {
+      padding: 3rem;
+      margin-bottom: 0;
+    }
+    > section {
+      padding: 4rem 3rem;
+      height: 45rem;
+      justify-content: space-evenly;
+
+      > article {
+        width: 33%;
+        height: 40%;
+      }
+    }
+  }
+
+  #contact {
+    > form {
+      > h2 {
+        font: 100 2.3rem $text2;
+      }
+      > input,
+      > button {
+        width: 65%;
+      }
+    }
+  }
+
+  //About Section
+  .qualifications {
+    padding: 5rem $p_sm;
+  }
+
+  //Footer Section
+  .footer {
+    padding: 0 $p_sm;
+  }
+
+  //Login Section
+  .login {
+    padding: 4rem $p_sm;
+
+    > form {
+      padding: 4em 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      > h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  //Contact Us Section
+  .contact {
+    > section {
+      padding: 4rem $p_sm;
+      flex-direction: column-reverse;
+      > .left {
+        width: 100%;
+      }
+      > .right {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 786px) {
+  nav {
+    > div {
+      &:first-of-type,
+      &:last-of-type {
+        display: none;
+      }
+    }
+  }
+  .navBtn {
+    display: block;
+  }
+  #work {
+    padding: 5rem $p_sm;
+    > section {
+      .workItem {
+        height: 45vmax;
+
+        > aside {
+          > p {
+            letter-spacing: 1.5px;
+            line-height: 150%;
+            margin: 1rem;
+
+            font-size: 1rem;
+          }
+          > a {
+            padding: 0.4rem 0.7rem;
+            font-size: 1rem;
+            margin: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #timeline {
+    .timelineItem {
+      padding: 1rem 3rem;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+      > div {
+        &:first-of-type {
+          padding: 15px 25px;
+          h2 {
+            font-size: 1rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+        }
+        &:last-of-type {
+          a {
+            font: 300 0.7rem $text1;
+            padding: 0.3rem 0.4rem;
+          }
+        }
+      }
+    }
+  }
+
+  //About Section
+  .qualifications {
+    .qualificationItem {
+      margin: 6rem 0;
+      padding: 1rem 2rem;
+      letter-spacing: 0;
+
+      > div {
+        &:first-of-type {
+          > svg {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+  //Footer Section
+  .footer {
+    padding: 0 $p_zero;
+  }
+
+  //Login Section
+}
+@media screen and (max-width: 600px) {
+  #home {
+    height: unset;
+    flex-direction: column-reverse;
+    > section {
+      &:first-of-type {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        > div {
+          border: none;
+          padding-top: 3rem;
+          > h1 {
+            font: 900 2.5rem $text1;
+          }
+          > div {
+            flex-direction: column;
+          }
+          aside {
+            align-items: center;
+          }
+          article[data-special] {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span {
+              display: block;
+              width: 70%;
+              word-wrap: break-word;
+            }
+          }
+
+          article {
+            width: 100%;
+            text-align: center;
+            &::after {
+              top: 0;
+              left: 0;
+            }
+          }
+        }
+      }
+      &:last-of-type {
+        border: none;
+        padding-top: 8rem;
+
+        &::after {
+          content: "";
+          width: 60%;
+          height: 40%;
+        }
+
+        > img {
+          width: 40%;
+          height: 40%;
+        }
+      }
+    }
+    > svg {
+      font-size: 2rem;
+      bottom: 2%;
+    }
+  }
+
+  .about {
+    height: unset;
+    padding: 5rem $p_sm;
+    flex-direction: column;
+    gap: 5rem;
+
+    > section {
+      &:first-of-type {
+        > img {
+          width: 40vmax;
+          height: 40vmax;
+        }
+      }
+      &:last-of-type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        > p {
+          text-align: center;
+          line-height: 130%;
+        }
+      }
+    }
+  }
+
+  #work {
+    > section {
+      > article {
+        width: 100%;
+        height: 30vmax;
+      }
+      .workItem {
+        padding: 0.5rem 1rem;
+        height: 30vmax;
+        box-shadow: 0 0 5px $color1;
+
+        > aside {
+          > h3 {
+            font-size: 0.8rem;
+            margin: 0.5rem;
+          }
+          > p {
+            letter-spacing: 0;
+            line-height: unset;
+            margin: 0%;
+            font-size: 0.6rem;
+          }
+          > a {
+            padding: 0.2rem 0.4rem;
+            font-size: 0.5rem;
+            margin: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #timeline {
+    .timelineBox::after {
+      left: 31px;
+    }
+    .timelineItem {
+      width: 100%;
+      padding-left: 5rem;
+      padding-right: 2rem;
+    }
+    .rightTimeline {
+      left: 0%;
+    }
+    .rightTimeline,
+    .leftTimeline {
+      &::after {
+        left: 15px;
+      }
+    }
+  }
+
+  #services {
+    > section {
+      margin: 3rem 0;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.2rem;
+      .servicesBox1 {
+        grid-column: 1/3;
+        grid-row: unset;
+      }
+      .servicesBox4 {
+        grid-column: 1/3;
+        grid-row: unset;
+      }
+      svg {
+        color: $color5;
+        font-size: 2rem;
+      }
+      span {
+        font: 700 0.8rem $text1;
+        letter-spacing: 3px;
+        margin: 1rem;
+      }
+    }
+  }
+
+  #testimonial {
+    > section {
+      height: unset;
+      gap: 3rem;
+      justify-content: space-evenly;
+
+      > article {
+        width: 100%;
+        height: 100vw;
+      }
+    }
+  }
+
+  //aBOUT sECTION
+  .qualifications {
+    .qualificationItem {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+      text-align: center;
+
+      > div {
+        &:first-of-type {
+          > svg {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+  }
+
+  #contact {
+    grid-template-columns: 1fr;
+    > aside {
+      display: none;
+    }
+  }
+
+  //Footer Section
+  .footer {
+    padding: 0 $p_zero;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    > div {
+      justify-content: center;
+    }
+
+    > aside {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      > article {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 0.5rem;
+
+        > a {
+          svg {
+            font-size: 2rem;
+            color: $primary_color;
+            transition: all 0.3s;
+            &:hover {
+              color: $white_color;
+              transform: translateY(-5px);
+            }
+          }
+        }
+      }
+    }
+
+    > a {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  .contact {
+    > section {
+      padding: 4rem $p_sm;
+      flex-direction: column-reverse;
+      > .left {
+        width: 100%;
+      }
+      > .right {
+        width: 100%;
+
+        .contact-details {
+          .contact-item {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

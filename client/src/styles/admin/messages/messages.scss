@@ -1,0 +1,96 @@
+.message_deatils {
+  margin: 10px;
+  min-height: 80vh;
+  border-radius: 20px;
+  > p {
+    font-size: 1.2rem;
+    padding: 1.4rem 0;
+    transition: 0.5s;
+    color: $grey_color;
+    font-family: $text2;
+  }
+
+  > .content {
+    background-color: $content_back_color;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: 0.5s;
+    min-height: 100vh;
+
+    display: flex;
+    gap: 1rem;
+
+    > .left {
+      width: 350px;
+      //   border: 1px solid red;
+      padding: 0.5rem 0rem;
+      border-radius: 1rem;
+      background-color: $white_color_1;
+      > div {
+        margin: 0 0.5rem;
+        margin-top: 01rem;
+
+        > .listItem {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: 0.5rem 0.5rem;
+          cursor: pointer;
+          border-radius: 0.5rem;
+          margin-bottom: 0.3rem;
+          border-bottom: 1px solid $black_color_1;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: $primary_color;
+          }
+
+          > .icon {
+            font-size: 2.2rem;
+            background-color: $white_color_1;
+            padding: 8px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $primary_color;
+          }
+          > .info {
+            width: 100%;
+            > div {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              > p {
+                color: $black_color;
+                font-size: 1.2rem;
+                font-weight: 500;
+              }
+              > span {
+                color: $grey_color;
+                font-size: 0.8rem;
+              }
+            }
+            > span {
+              color: $grey_color;
+              font-size: 0.8rem;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 1;
+            }
+          }
+        }
+      }
+    }
+
+    > .right {
+      padding: 0.5rem 1rem;
+      flex: 1;
+      background-color: $white_color;
+      border-radius: 1rem;
+    }
+  }
+}

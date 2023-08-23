@@ -1,0 +1,71 @@
+.footer {
+  padding: 0 $p;
+  background-color: $secondary_color;
+  color: $white_color;
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+  align-items: center;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    > img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+    > h2 {
+      margin: 0.5rem;
+    }
+    > p {
+      font: 400 1.2rem $text2;
+    }
+  }
+
+  > aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > article {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      > a {
+        svg {
+          font-size: 2rem;
+          color: $primary_color;
+          transition: all 0.3s;
+          &:hover {
+            color: $white_color;
+            transform: translateY(-5px);
+          }
+        }
+      }
+    }
+  }
+  > p {
+    width: 50px;
+    height: 50px;
+    background-color: $white_color;
+    border-radius: 50%;
+    border: 2px solid $white_color;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s;
+    animation: uparrow 0.5s infinite ease-in alternate;
+    cursor: pointer;
+    svg {
+      font-size: 2rem;
+      color: $primary_color_1;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

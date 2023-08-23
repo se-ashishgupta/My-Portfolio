@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+@import "statics";
+@import "animation";
+@import "../styles/layout/header";
+@import "../styles/home/home";
+@import "../styles/home/work";
+@import "../styles/home/timeline";
+@import "../styles/home/services";
+@import "../styles/home/about";
+@import "../styles/blogs/blogs";
+@import "../styles/blogs/blogs";
+@import "../styles/projects/projects";
+@import "../styles/contact/contact";
+@import "contact";
+@import "./about/about";
+@import "./skills/skills";
+@import "./services/services";
+@import "../styles/layout/pageheader";
+@import "../styles/admin/login/login";
+@import "../styles/layout/footer";
+@import "../styles/layout/loading/loader";
+@import "../styles/layout/spinner/spinner";
+@import "mediaquery";
+@import "./admin/admin";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $text2;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: $white_color;
+  overflow-x: hidden;
+}
+
+.spinner {
+  display: flex;
+  > div {
+    // background-color: red;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: 4px solid $primary_color;
+    border-top: 4px solid $white_color;
+    border-right: 4px solid $white_color;
+    animation: spinner 1s linear infinite;
+  }
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

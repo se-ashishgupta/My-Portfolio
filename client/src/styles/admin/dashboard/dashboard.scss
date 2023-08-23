@@ -1,0 +1,28 @@
+.dashboard {
+  margin: 10px;
+  min-height: 100vh;
+  border-radius: 20px;
+  > p {
+    font-size: 1.2rem;
+    padding: 1.4rem 0;
+    transition: 0.5s;
+    color: $grey_color;
+    font-family: $text2;
+  }
+  > .content {
+    background-color: $content_back_color;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    transition: 0.5s;
+
+    > .chart_container {
+      width: 100%;
+      display: flex;
+      > .skillChart {
+        width: calc(50% - 20px);
+        height: 20rem;
+      }
+    }
+  }
+}

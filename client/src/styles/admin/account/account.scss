@@ -1,0 +1,131 @@
+.editaccount_details {
+  margin: 10px;
+  min-height: 80vh;
+  border-radius: 20px;
+
+  > p {
+    font-size: 1.2rem;
+    padding: 1.4rem 0;
+    transition: 0.5s;
+    color: $grey_color;
+    font-family: $text2;
+  }
+  > .content {
+    background-color: $content_back_color;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0 10px 0;
+    transition: 0.5s;
+    scroll-behavior: smooth;
+  }
+}
+
+.editaccount_details_from {
+  > .file_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    > .form-group {
+      display: flex;
+      // flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      > img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        padding: 0.8rem;
+        box-shadow: 0 0 10px $grey_color;
+        background-color: $back_color;
+      }
+      > input {
+        background-color: $back_color;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        width: 50%;
+      }
+    }
+  }
+  > .input_section {
+    display: flex;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1.4rem;
+    margin-top: 5px;
+    transition: 0.5s;
+    > .form-group {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      width: calc(33% - 10px);
+      transition: 0.5s;
+
+      > input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        background-color: $back_color;
+        transition: 0.5s;
+        overflow: hidden;
+        font-family: $text1;
+        border: 2px solid $grey_color;
+        &:focus {
+          border: 2px solid $primary_color;
+        }
+      }
+      > label {
+        font-size: 1.1rem;
+        color: $grey_color;
+        transition: 0.5s;
+        font-family: $text1;
+      }
+    }
+  }
+  > .button_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.4rem;
+    margin-top: 5px;
+    transition: 0.5s;
+    > input {
+      font-size: 1.2rem;
+      font-weight: 500px;
+      padding: 0.6rem;
+      border-radius: 5px;
+      border: none;
+      transition: all 0.3s ease;
+      transition: 0.5s;
+      font-family: $text1;
+    }
+    > .form_submit {
+      background-color: $secondary_color;
+      cursor: pointer;
+      &:hover {
+        background-color: $primary_color_1;
+        color: $white_color;
+      }
+    }
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 950px) {
+  .editaccount_details_from .input_section .form-group {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 550px) {
+  .editaccount_details_from .input_section .form-group {
+    width: calc(100% - 10px);
+  }
+}

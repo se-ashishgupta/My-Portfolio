@@ -1,0 +1,301 @@
+.adminpanel_container {
+  background-color: $back_color;
+  > .adminpanel_content {
+    position: relative;
+    margin: $topheader_height 0 0 0;
+    padding: 0 1rem;
+    font-size: 1rem;
+    transition: 0.5s;
+  }
+}
+.adminpanel_content .topbar_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: $topheader_height;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $white_color;
+  padding: 0 1.5rem;
+  transition: 0.5s;
+}
+
+.adminpanel_container .adminpanel_content {
+  > .topbar_header {
+    > .header_toggle {
+      font-size: 2.2rem;
+      font-weight: 900;
+      cursor: pointer;
+      color: $primary_color;
+    }
+
+    > .header_item {
+      height: $topheader_height;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: all 0.3s;
+      > a {
+        > svg {
+          font-size: 2.6rem;
+          color: $primary_color;
+          border-radius: 50%;
+          padding: 5px;
+          background-color: $back_color;
+          border: 1px solid $back_color;
+        }
+        > p {
+          position: absolute;
+          background-color: $primary_color_1;
+          border-radius: 50%;
+          width: 15px;
+          height: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font: 900 0.7rem "Roboto";
+          transform: translate(1.2rem, -2rem);
+        }
+        &:hover svg {
+          border: 1px solid $primary_color;
+        }
+      }
+      > img {
+        width: 2.6rem;
+        height: 2.6rem;
+        padding: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: $back_color;
+        border: 1px solid $back_color;
+        &:hover {
+          border: 1px solid $primary_color;
+        }
+      }
+
+      > .topbarWrapMenu {
+        position: absolute;
+        top: 100%;
+        right: 1%;
+        width: 280px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.3s;
+
+        > .subMenu {
+          background-color: $primary_color;
+          padding: 15px;
+          margin: 10px;
+          border-radius: 5px;
+
+          > .userInfo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            > img {
+              width: 40px;
+              border-radius: 50%;
+            }
+            > h3 {
+              font-weight: 500;
+              color: $white_color;
+            }
+          }
+          > hr {
+            border: 0;
+            height: 1px;
+            width: 100%;
+            background-color: $grey_color;
+            margin: 1rem 0 0.7rem;
+          }
+
+          > a {
+            display: flex;
+            align-items: center;
+            color: $white_color;
+            margin: 6px 0;
+            padding: 5px;
+            letter-spacing: 1px;
+
+            > svg {
+              font-size: 2rem;
+              margin-right: 1rem;
+            }
+            > p {
+              width: 100%;
+            }
+            > span {
+              font-size: 1.2rem;
+              transition: transform 0.5s;
+            }
+            &:hover {
+              p {
+                font-weight: bold;
+              }
+              background-color: $primary_color_1;
+              span {
+                transform: translateX(5px);
+              }
+            }
+          }
+        }
+      }
+
+      .topbarWrapMenuOpen {
+        max-height: 400px;
+      }
+    }
+  }
+
+  > .sidebar {
+    position: fixed;
+    top: 0;
+    left: -30%;
+    min-height: 100vh;
+    width: $sidebar_width;
+    background-color: $primary_color;
+    transition: 0.5s;
+
+    > .navbar_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      min-height: 100vh;
+      .sidebar_header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary_color;
+        height: $topheader_height;
+        margin-bottom: 2rem;
+        width: 100%;
+
+        > h1 {
+          color: $white_color;
+          letter-spacing: 2px;
+        }
+      }
+
+      .nav_list {
+        > a {
+          display: flex;
+          align-items: center;
+          gap: 1.2rem;
+          padding: 0.5rem 0.5rem 0.5rem 1.2rem;
+          position: relative;
+          color: $white_color;
+          letter-spacing: 1px;
+          margin-bottom: 0.1rem;
+          /* link not wrap */
+          white-space: nowrap;
+
+          svg {
+            display: block;
+            font-size: 1.7rem;
+          }
+          > p {
+            width: 100%;
+          }
+          > span {
+            font-size: 1.2rem;
+            transition: transform 0.5s;
+          }
+
+          &:hover {
+            background-color: $primary_color_1;
+            p {
+              font-weight: bold;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 0;
+              height: 43px;
+              width: 3px;
+              background-color: $white_color;
+              transition: 0.5s;
+            }
+            span {
+              transform: translateX(3px);
+            }
+          }
+        }
+
+        .active {
+          background-color: $primary_color_1;
+          p {
+            font-weight: bold;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 43px;
+            width: 3px;
+            background-color: $white_color;
+            transition: 0.5s;
+          }
+          span {
+            transform: translateX(3px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.adminpanel_container .adminpanel_content .slider {
+  left: 0;
+}
+
+.adminpanel_container .navbar_space_toggle {
+  padding-left: calc($sidebar_width + 1rem);
+}
+
+/* //Content page */
+.adminpanel_container .adminpanel_content .item_content {
+  padding: 0.5rem 0;
+  min-height: 100vh;
+}
+/* //Responsive */
+
+@media (min-width: 768px) {
+  .adminpanel_container .adminpanel_content {
+    margin: calc($topheader_height + 1rem) 0 0 0;
+    padding: 0 1rem 0 calc($sidebar_width + 2rem);
+  }
+  .adminpanel_content .topbar_header {
+    height: calc($topheader_height + 1rem);
+    padding-left: calc($sidebar_width + 2rem);
+  }
+
+  .adminpanel_container .adminpanel_content .sidebar {
+    left: 0;
+    padding: 0 0 0 0;
+  }
+  .adminpanel_container
+    .adminpanel_content
+    .sidebar
+    .navbar_content
+    .sidebar_header {
+    height: calc($topheader_height + 1rem);
+
+    > .logo_img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .adminpanel_container .adminpanel_content .slider {
+    width: calc($sidebar_width + 168px);
+  }
+  .adminpanel_container .navbar_space_toggle {
+    padding-left: calc($sidebar_width + 188px);
+  }
+}

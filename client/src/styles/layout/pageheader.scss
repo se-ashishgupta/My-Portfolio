@@ -1,0 +1,47 @@
+.pageheader {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  width: 100%;
+  height: 16rem;
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $primary_color;
+    opacity: 0.3;
+  }
+  > div {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    > h2 {
+      color: $white_color;
+      font: 500 2.5rem $text1;
+    }
+    > p {
+      color: $secondary_color;
+      text-align: center;
+      font-size: 1.2rem;
+
+      > a {
+        color: $secondary_color;
+        transition: all 0.3s;
+        &:hover {
+          color: $white_color;
+        }
+      }
+    }
+  }
+}

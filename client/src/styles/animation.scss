@@ -1,0 +1,42 @@
+@keyframes animateSVG {
+  to {
+    transform: translate(-50%, -10px);
+  }
+}
+@keyframes upanddown {
+  to {
+    transform: translateY(-5px);
+  }
+}
+@keyframes uparrow {
+  to {
+    transform: translateY(-5px);
+  }
+}
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
