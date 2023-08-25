@@ -28,6 +28,7 @@ import AdminProjects from "./components/admin/projects/Projects";
 import AdminServices from "./components/admin/services/Services";
 import AdminBlogs from "./components/admin/blogs/Blogs";
 import AdminMessages from "./components/admin/messages/Messages";
+import ScrollToTop from "./utils/ScrollToTop";
 
 const App = () => {
   const [ratio, setRatio] = useState(window.innerWidth / window.innerHeight);
@@ -98,6 +99,7 @@ const App = () => {
             </Routes>
 
             <Toaster />
+            <ScrollToTop />
           </>
         )}
       </Router>
