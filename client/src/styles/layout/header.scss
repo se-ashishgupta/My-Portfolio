@@ -6,9 +6,10 @@ nav {
   background-color: $primary_color;
   justify-content: space-between;
   padding: 0 $p;
-  // position: sticky;
-  // top: 0;
-  // z-index: 10000;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  box-shadow: 0 6px 2px -2px rgba(0, 0, 0, 0.2);
 
   > h2 {
     -webkit-text-stroke: 2px $white_color;
@@ -23,21 +24,31 @@ nav {
       text-shadow: 0 0 40px $white_color;
     }
   }
+  > img {
+    display: none;
+  }
 
   > div {
     &:first-of-type {
+      height: 100%;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 2rem;
       > a {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-size: 1.1rem;
         color: $white_color;
-        font-weight: 700;
+        font-weight: 600;
         transition: all 0.5s;
         letter-spacing: 1px;
         opacity: 0;
         animation: slideBottom 1s ease forwards;
         animation-delay: calc(0.2s * var(--i));
+        position: relative;
 
         @keyframes slideBottom {
           from {
@@ -50,9 +61,33 @@ nav {
             opacity: 1;
           }
         }
+        &::after {
+          content: "";
+          width: 100%;
+          height: 4px;
+          bottom: 0px;
+          left: 0;
+          background-color: white;
+          position: absolute;
+
+          transform: scaleX(0);
+          // transform-origin: center;
+          transition: all 0.3s ease-in;
+        }
         &:hover {
           color: $secondary_color;
-          text-shadow: 0 0 40px black;
+          text-shadow: 0 0 20px black;
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+
+      .active {
+        color: $secondary_color;
+        text-shadow: 0 0 20px black;
+        &::after {
+          transform: scaleX(1);
         }
       }
     }
@@ -71,6 +106,7 @@ nav {
         border-radius: 5px;
         font-weight: 500;
         transition: all 0.3s;
+
         &:hover {
           background-color: $color6;
           color: $primary_color;
@@ -87,14 +123,15 @@ nav {
   border: none;
   background-color: transparent;
   color: $white_color;
-  z-index: 20;
-  font-size: 1.8rem;
+  // z-index: 20;
+  font-size: 2.2rem;
+  transition: all 0.3s;
 }
-.navBtnFixed {
-  position: fixed;
-  top: 1.25rem;
-  right: 1rem;
-}
+// .navBtnFixed {
+//   position: fixed;
+//   top: 1.25rem;
+//   right: 1rem;
+// }
 
 .navPhone {
   transition: all 0.5s;
@@ -109,21 +146,20 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 3rem;
+  padding-top: 4rem;
+  gap: 2rem;
   > h2 {
-    -webkit-text-stroke: 2px $white_color;
-    color: transparent;
-    cursor: default;
-    font-size: 2.5em;
-    transition: all 1s;
-    opacity: 0;
-    animation: slideRight 1s ease forwards;
-    &:hover {
-      color: white;
-      text-shadow: 0 0 40px $white_color;
-    }
+    display: hidden;
   }
+  > img {
+    width: 180px;
+    height: 180px;
+    background-color: $primary_color_1;
+    padding: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 3px $primary_color;
+  }
+
   > div {
     &:first-of-type {
       display: flex;
@@ -136,7 +172,7 @@ nav {
         letter-spacing: 1px;
         font-weight: 600;
         transition: all 0.3s;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         &:hover {
           color: $primary_color;
         }

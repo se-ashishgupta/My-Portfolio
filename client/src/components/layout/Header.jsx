@@ -1,6 +1,6 @@
-import React from "react";
-import { ImMenu, ImCross } from "react-icons/im";
-import { RiMenu3Fill } from "react-icons/ri";
+import React, { useState } from "react";
+import { FiMenu } from "react-icons/fi";
+import { MdClose } from "react-icons/md";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const Header = ({ menuOpen, setMenuOpen }) => {
           onClick={() => setMenuOpen(!menuOpen)}
           className={`navBtn ${menuOpen ? "navBtnFixed" : ""}`}
         >
-          {menuOpen ? <ImCross /> : <RiMenu3Fill />}
+          {menuOpen ? <MdClose /> : <FiMenu />}
         </button>
       </nav>
     </>
@@ -22,57 +22,62 @@ const Header = ({ menuOpen, setMenuOpen }) => {
 
 const NavContent = ({ setMenuOpen }) => {
   const { user } = useSelector((state) => state.user);
+  const [active, setActive] = useState(location.pathname);
+
+  const navItem = [
+    {
+      title: "Home",
+      to: "/",
+    },
+    {
+      title: "About",
+      to: "/about",
+    },
+    {
+      title: "Skills",
+      to: "/skills",
+    },
+    {
+      title: "Projects",
+      to: "/projects",
+    },
+    {
+      title: "Services",
+      to: "/services",
+    },
+    {
+      title: "Blogs",
+      to: "/blogs",
+    },
+    {
+      title: "Contact",
+      to: "/contact",
+    },
+  ];
+
+  const menuClickHandler = (to) => {
+    setMenuOpen(false);
+    setActive(to);
+  };
+
   return (
     <>
       <h2>{user.fname}</h2>
-      <div>
-        <Link onClick={() => setMenuOpen(false)} to="/" style={{ "--i": 1 }}>
-          Home
-        </Link>
-        <Link
-          onClick={() => setMenuOpen(false)}
-          to="/about"
-          style={{ "--i": 2 }}
-        >
-          About
-        </Link>
-        <Link
-          onClick={() => setMenuOpen(false)}
-          to="/skills"
-          style={{ "--i": 3 }}
-        >
-          Skills
-        </Link>
-        <Link
-          onClick={() => setMenuOpen(false)}
-          to="/projects"
-          style={{ "--i": 4 }}
-        >
-          Projects
-        </Link>
-        <Link
-          onClick={() => setMenuOpen(false)}
-          to="/services"
-          style={{ "--i": 5 }}
-        >
-          Services
-        </Link>
-        <Link
-          onClick={() => setMenuOpen(false)}
-          to="/blogs"
-          style={{ "--i": 6 }}
-        >
-          Blogs
-        </Link>
-        <Link
-          onClick={() => setMenuOpen(false)}
-          to="/contact"
-          style={{ "--i": 7 }}
-        >
-          Contact
-        </Link>
-      </div>
 
+      <img src={user.avatar.url} alt={user.name} />
+
+      <div>
+        {navItem.map((item, index) => (
+          <Link
+            onClick={() => menuClickHandler(item.to)}
+            to={item.to}
+            style={{ "--i": index }}
+            className={active == item.to ? "active" : ""}
+          >
+            {item.title}
+          </Link>
+        ))}
+      </div>
       <div>
         <a onClick={() => setMenuOpen(false)} href={`mailto:${user.email}`}>
           <button>Email</button>

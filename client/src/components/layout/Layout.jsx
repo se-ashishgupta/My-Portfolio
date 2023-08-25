@@ -5,6 +5,7 @@ import Footer from "./Footer";
 
 const Layout = ({ user }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
       <HeaderPhone menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
