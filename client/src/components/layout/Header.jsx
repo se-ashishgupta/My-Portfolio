@@ -5,6 +5,9 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = ({ menuOpen, setMenuOpen }) => {
+  if (window.innerWidth > 785) {
+    setMenuOpen(false);
+  }
   return (
     <>
       <nav id="topToHeader">
