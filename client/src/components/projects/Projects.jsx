@@ -115,8 +115,11 @@ const Card = ({ item, user }) => (
         {/* Deatils  */}
         <div className="details">
           <div className="titles">
-            <span>Web Development</span>
-            <p>{item.title}</p>
+            <span className="category_head">Web Development</span>
+            <p className="p_title">{item.title}</p>
+            <p className="p_desc">{item.description}</p>
+            <span className="tectstack_head">Texh Stack :</span>
+            <p className="p_techstack">{item.tech_stack}</p>
           </div>
 
           <div className="creater">

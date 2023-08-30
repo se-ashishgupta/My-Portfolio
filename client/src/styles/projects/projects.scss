@@ -37,6 +37,7 @@
     transition: all 0.3s;
     .projectcard {
       max-width: 800px;
+      height: 46rem;
 
       > div {
         margin-bottom: 2.5rem;
@@ -65,6 +66,8 @@
         > .project-details {
           position: relative;
           overflow: visible;
+          background-color: $secondary_color_1;
+          height: 25rem;
 
           > .dates {
             width: 100%;
@@ -116,7 +119,8 @@
               display: flex;
               flex-direction: column;
               gap: 0.3rem;
-              > span {
+              > .category_head,
+              .tectstack_head {
                 color: $primary_color;
                 font-weight: 500;
                 font-family: cursive;
@@ -124,12 +128,28 @@
                 font-size: 0.9rem;
               }
               > p {
-                font-size: 1.3rem;
-                font-weight: 500;
                 line-height: 100%;
                 font-family: $text1;
-                color: $secondary_color;
+              }
+              .p_title {
+                color: $white_color;
                 text-transform: uppercase;
+                font-size: 1.3rem;
+                font-weight: 500;
+              }
+              .p_desc {
+                color: $white_color_1;
+                margin: 10px 0;
+                font-size: 1rem;
+                font-weight: 500;
+              }
+              .tectstack_head {
+                font-size: 0.8rem;
+              }
+              .p_techstack {
+                color: $white_color_1;
+                font-size: 0.9rem;
+                font-weight: 500;
               }
             }
 
