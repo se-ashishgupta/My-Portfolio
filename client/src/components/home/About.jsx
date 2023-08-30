@@ -11,6 +11,10 @@ const About = () => {
       initial: { x: "-100%", opacity: 0 },
       whileInView: { x: 0, opacity: 1 },
       viewport: { once: true },
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
     },
     slideLeft: {
       initial: { x: "100%", opacity: 0 },
