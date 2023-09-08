@@ -65,14 +65,13 @@ const NavContent = ({ setMenuOpen }) => {
 
   return (
     <>
-      <h2>{user?.fname}</h2>
+      <h2>{user.fname}</h2>
 
-      <img src={user?.avatar.url} alt={user?.fname} />
+      <img src={user.avatar.url} alt={user.name} />
 
       <div>
         {navItem.map((item, index) => (
           <Link
-            key={index}
             onClick={() => menuClickHandler(item.to)}
             to={item.to}
             style={{ "--i": index }}
@@ -83,7 +82,7 @@ const NavContent = ({ setMenuOpen }) => {
         ))}
       </div>
       <div>
-        <a onClick={() => setMenuOpen(false)} href={`mailto:${user?.email}`}>
+        <a onClick={() => setMenuOpen(false)} href={`mailto:${user.email}`}>
           <button>Email</button>
         </a>
       </div>

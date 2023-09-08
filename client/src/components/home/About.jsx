@@ -34,12 +34,12 @@ const About = () => {
         {...AnimationVarients.slideRight}
         transition={slideTransition}
       >
-        <img src={user?.avatar.url} alt="ashish" />
+        <img src={user.avatar.url} alt="ashish" />
       </motion.section>
       <motion.section>
         <h3>About Me</h3>
         <h2>Personal Details</h2>
-        <p>{user?.about}</p>
+        <p>{user.about}</p>
         <Link to="/about">View Full Details</Link>
       </motion.section>
     </div>

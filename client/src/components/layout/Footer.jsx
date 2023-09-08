@@ -10,7 +10,7 @@ const Footer = ({ user }) => {
   return (
     <div className="footer">
       <div>
-        <img src={user?.avatar.url} alt="founder" />
+        <img src={user.avatar.url} alt="founder" />
         <div>
           <h2>Ashish Gupta</h2>
           <p>Coidng is Doing Well</p>

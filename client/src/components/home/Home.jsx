@@ -22,7 +22,7 @@ const Home = ({ user }) => {
   };
 
   useEffect(() => {
-    const contorls = animate(projectCount, user?.projects.length, {
+    const contorls = animate(projectCount, user.projects.length, {
       duration: 1,
     });
     return contorls.stop;
@@ -38,7 +38,7 @@ const Home = ({ user }) => {
               transition={slideRightTransition}
             >
               Hi, I'm <br />
-              {`${user?.fname} ${user?.lname}`}
+              {`${user.fname} ${user.lname}`}
             </motion.h1>
 
             <Typewriter
@@ -55,7 +55,7 @@ const Home = ({ user }) => {
               }}
             />
             <div>
-              <a href={`mailto:${user?.email}`}>Hire Me</a>
+              <a href={`mailto:${user.email}`}>Hire Me</a>
               <a href="#work">
                 Projects <BsArrowUpRight />
               </a>
@@ -71,18 +71,18 @@ const Home = ({ user }) => {
 
               <article data-special>
                 <p>Contact</p>
-                <span>{user?.email}</span>
+                <span>{user.email}</span>
               </article>
             </aside>
           </div>
         </section>
         <section>
-          <img src={user?.avatar.url} alt="ashish" />
+          <img src={user.avatar.url} alt="ashish" />
         </section>
         <BsChevronDown />
       </div>
       <About />
-      <Work projects={user?.projects} />
+      <Work projects={user.projects} />
       <Timeline />
       <Services />
     </>
