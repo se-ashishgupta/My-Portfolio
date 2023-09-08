@@ -64,44 +64,37 @@ const App = () => {
   return (
     <>
       <Router>
-        {loading ? (
-          <Loader />
-        ) : (
-          <>
-            <Routes>
-              <Route path="/" element={<Layout user={user} />}>
-                <Route index element={<Home user={user} />} />
-                <Route path="about" element={<About user={user} />} />
-                <Route path="skills" element={<Skills user={user} />} />
-                <Route path="projects" element={<Projects user={user} />} />
-                <Route path="services" element={<Services />} />
-                <Route path="blogs" element={<Blogs />} />
-                <Route path="contact" element={<Contact user={user} />} />
-              </Route>
+        <>
+          <Routes>
+            <Route path="/" element={<Layout user={user} />}>
+              <Route index element={<Home user={user} />} />
+              <Route path="about" element={<About user={user} />} />
+              <Route path="skills" element={<Skills user={user} />} />
+              <Route path="projects" element={<Projects user={user} />} />
+              <Route path="services" element={<Services />} />
+              <Route path="blogs" element={<Blogs />} />
+              <Route path="contact" element={<Contact user={user} />} />
+            </Route>
 
-              {/* LoginPanel */}
-              <Route path="/admin" element={<Login />} />
+            {/* LoginPanel */}
+            <Route path="/admin" element={<Login />} />
 
-              {/* AdminPanel */}
-              <Route path="/adminpanel" element={<AdminPanel />}>
-                <Route index element={<Dashboard />} />
-                <Route path="account" element={<Account />} />
-                <Route
-                  path="qualifications"
-                  element={<AdminQualifications />}
-                />
-                <Route path="skills" element={<AdminSkills />} />
-                <Route path="projects" element={<AdminProjects />} />
-                <Route path="services" element={<AdminServices />} />
-                <Route path="blogs" element={<AdminBlogs />} />
-                <Route path="messages" element={<AdminMessages />} />
-              </Route>
-            </Routes>
+            {/* AdminPanel */}
+            <Route path="/adminpanel" element={<AdminPanel />}>
+              <Route index element={<Dashboard />} />
+              <Route path="account" element={<Account />} />
+              <Route path="qualifications" element={<AdminQualifications />} />
+              <Route path="skills" element={<AdminSkills />} />
+              <Route path="projects" element={<AdminProjects />} />
+              <Route path="services" element={<AdminServices />} />
+              <Route path="blogs" element={<AdminBlogs />} />
+              <Route path="messages" element={<AdminMessages />} />
+            </Route>
+          </Routes>
 
-            <Toaster />
-            <ScrollToTop />
-          </>
-        )}
+          <Toaster />
+          <ScrollToTop />
+        </>
       </Router>
     </>
   );

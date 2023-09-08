@@ -18,7 +18,7 @@ const Work = ({ projects }) => {
             infiniteLoop={true}
             autoPlay={true}
           >
-            {projects.map((i) => (
+            {projects?.map((i) => (
               <div className="workItem" key={i.title}>
                 <img src={i.image.url} alt={i.title} />
                 <aside>
