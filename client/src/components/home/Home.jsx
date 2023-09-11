@@ -83,7 +83,7 @@ const Home = ({ user }) => {
       </div>
       <About />
       <Work projects={user.projects} />
-      <Timeline />
+      <Timeline projects={user.projects} />
       <Services />
     </>
   );

@@ -1,14 +1,13 @@
 import React from "react";
-import data from "../../assets/data.json";
 import { motion } from "framer-motion";
-const Timeline = () => {
+const Timeline = ({ projects }) => {
   return (
     <div id="timeline">
       <div className="timelineBox">
-        {data.projects.map((item, index) => (
+        {projects.map((item, index) => (
           <TimelineItem
             heading={item.title}
-            text={item.date}
+            text={item.start_date}
             index={index}
             key={item.title}
           />
