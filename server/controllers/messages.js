@@ -2,12 +2,15 @@ import { catchAsyncErorr } from "../middlewares/catchAsyncErorr.js";
 import ErrorHandler from "../middlewares/error.js";
 import { Messages } from "../models/messages.js";
 import { User } from "../models/user.js";
+import { senEmail } from "../utils/sendMail.js";
 
 export const sendMessage = catchAsyncErorr(async (req, res, next) => {
   const { name, email, subject, message, toMessage } = req.body;
 
   if (!name || !email || !subject || !message)
     return next(new ErrorHandler("Please enter all fields", 400));
+
+  await senEmail(email, process.env.EMAIL_USERNAME, subject, message);
 
   let msg = await Messages.create({
     name,

@@ -8,6 +8,7 @@ const Header = ({ menuOpen, setMenuOpen }) => {
   if (window.innerWidth > 785) {
     setMenuOpen(false);
   }
+
   return (
     <>
       <nav id="topToHeader">
