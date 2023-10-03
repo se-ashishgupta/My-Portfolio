@@ -68,17 +68,22 @@ export const getmyProfile = async (req, res) => {
   });
 };
 export const logout = (req, res) => {
-  res
-    .status(200)
-    .cookie("token", "", {
-      expires: new Date(Date.now()),
-      sameSite: process.env.NODE_ENV === "Developemnt" ? "lax" : "none",
-      secure: process.env.NODE_ENV === "Developemnt" ? false : true,
-    })
-    .json({
-      success: true,
-      message: "Logout SuccessFully",
-    });
+  const { serial_key } = req.body;
+
+  if (serial_key) {
+    res
+      .status(200)
+      .cookie("token", "", {
+        expires: new Date(Date.now()),
+        sameSite: process.env.NODE_ENV === "Developemnt" ? "lax" : "none",
+        secure: process.env.NODE_ENV === "Developemnt" ? false : true,
+      })
+      .json({
+        success: true,
+        message: "Logout SuccessFully",
+      });
+  }
+
 };
 
 export const updateProfile = async (req, res, next) => {

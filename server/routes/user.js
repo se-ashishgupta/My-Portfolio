@@ -32,7 +32,7 @@ router.get("/me", getUser);
 
 router.post("/register", register);
 router.post("/login", login);
-router.get("/logout", logout);
+router.post("/logout", logout);
 
 router.get("/profile", isAuthenticated, getmyProfile);
 router.put("/updatedetails", isAuthenticated, updateProfile);

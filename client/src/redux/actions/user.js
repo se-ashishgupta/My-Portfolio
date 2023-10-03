@@ -72,15 +72,20 @@ export const loadUser = () => async (dispatch) => {
   }
 };
 
+const serial_key = "Ashish";
 export const logoutUser = () => async (dispatch) => {
   try {
     dispatch({
       type: "LogoutUserRequest",
     });
 
-    const { data } = await axios.get(`${server}/user/logout`, {
-      withCredentials: true,
-    });
+    const { data } = await axios.post(`${server}/user/logout`,
+      {
+        serial_key
+      },
+      {
+        withCredentials: true,
+      });
 
     dispatch({
       type: "LogoutUserSuccess",
@@ -111,48 +116,48 @@ export const updateAccount =
     zipcode,
     avatar
   ) =>
-  async (dispatch) => {
-    try {
-      dispatch({
-        type: "UpdateAccountRequest",
-      });
+    async (dispatch) => {
+      try {
+        dispatch({
+          type: "UpdateAccountRequest",
+        });
 
-      const { data } = await axios.put(
-        `${server}/user/updatedetails`,
-        {
-          email,
-          fname,
-          lname,
-          gender,
-          experiance,
-          dob,
-          about,
-          phone,
-          address,
-          country,
-          state,
-          city,
-          zipcode,
-          avatar,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
+        const { data } = await axios.put(
+          `${server}/user/updatedetails`,
+          {
+            email,
+            fname,
+            lname,
+            gender,
+            experiance,
+            dob,
+            about,
+            phone,
+            address,
+            country,
+            state,
+            city,
+            zipcode,
+            avatar,
           },
-          withCredentials: true,
-        }
-      );
-      dispatch({
-        type: "UpdateAccountSuccess",
-        payload: data.message,
-      });
-    } catch (error) {
-      dispatch({
-        type: "UpdateAccountFailure",
-        payload: error.response.data.message,
-      });
-    }
-  };
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            withCredentials: true,
+          }
+        );
+        dispatch({
+          type: "UpdateAccountSuccess",
+          payload: data.message,
+        });
+      } catch (error) {
+        dispatch({
+          type: "UpdateAccountFailure",
+          payload: error.response.data.message,
+        });
+      }
+    };
 
 // Qualification
 
@@ -169,45 +174,45 @@ export const addQualification =
     result_scale,
     result
   ) =>
-  async (dispatch) => {
-    try {
-      dispatch({
-        type: "AddQualificationRequest",
-      });
+    async (dispatch) => {
+      try {
+        dispatch({
+          type: "AddQualificationRequest",
+        });
 
-      const { data } = await axios.post(
-        `${server}/user/addqualification`,
-        {
-          institution_name,
-          course,
-          state,
-          city,
-          country,
-          start_date,
-          end_date,
-          result_type,
-          result_scale,
-          result,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
+        const { data } = await axios.post(
+          `${server}/user/addqualification`,
+          {
+            institution_name,
+            course,
+            state,
+            city,
+            country,
+            start_date,
+            end_date,
+            result_type,
+            result_scale,
+            result,
           },
-          withCredentials: true,
-        }
-      );
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            withCredentials: true,
+          }
+        );
 
-      dispatch({
-        type: "AddQualificationSuccess",
-        payload: data.message,
-      });
-    } catch (error) {
-      dispatch({
-        type: "AddQualificationFailure",
-        payload: error.response.data.message,
-      });
-    }
-  };
+        dispatch({
+          type: "AddQualificationSuccess",
+          payload: data.message,
+        });
+      } catch (error) {
+        dispatch({
+          type: "AddQualificationFailure",
+          payload: error.response.data.message,
+        });
+      }
+    };
 
 export const deleteQualification = (id) => async (dispatch) => {
   try {
@@ -246,44 +251,44 @@ export const updateQualification =
     result,
     id
   ) =>
-  async (dispatch) => {
-    try {
-      dispatch({
-        type: "UpdateQualificationRequest",
-      });
+    async (dispatch) => {
+      try {
+        dispatch({
+          type: "UpdateQualificationRequest",
+        });
 
-      const { data } = await axios.put(
-        `${server}/user/updatequalification/${id}`,
-        {
-          institution_name,
-          course,
-          state,
-          city,
-          country,
-          start_date,
-          end_date,
-          result_type,
-          result_scale,
-          result,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
+        const { data } = await axios.put(
+          `${server}/user/updatequalification/${id}`,
+          {
+            institution_name,
+            course,
+            state,
+            city,
+            country,
+            start_date,
+            end_date,
+            result_type,
+            result_scale,
+            result,
           },
-          withCredentials: true,
-        }
-      );
-      dispatch({
-        type: "UpdateQualificationSuccess",
-        payload: data.message,
-      });
-    } catch (error) {
-      dispatch({
-        type: "UpdateQualificationFailure",
-        payload: error.response.data.message,
-      });
-    }
-  };
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            withCredentials: true,
+          }
+        );
+        dispatch({
+          type: "UpdateQualificationSuccess",
+          payload: data.message,
+        });
+      } catch (error) {
+        dispatch({
+          type: "UpdateQualificationFailure",
+          payload: error.response.data.message,
+        });
+      }
+    };
 
 // Skill
 
@@ -394,43 +399,43 @@ export const addProject =
     live_url,
     image
   ) =>
-  async (dispatch) => {
-    try {
-      dispatch({
-        type: "AddProjectRequest",
-      });
+    async (dispatch) => {
+      try {
+        dispatch({
+          type: "AddProjectRequest",
+        });
 
-      const { data } = await axios.post(
-        `${server}/user/addproject`,
-        {
-          title,
-          description,
-          tech_stack,
-          start_date,
-          end_date,
-          repository_url,
-          live_url,
-          image,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
+        const { data } = await axios.post(
+          `${server}/user/addproject`,
+          {
+            title,
+            description,
+            tech_stack,
+            start_date,
+            end_date,
+            repository_url,
+            live_url,
+            image,
           },
-          withCredentials: true,
-        }
-      );
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            withCredentials: true,
+          }
+        );
 
-      dispatch({
-        type: "AddProjectSuccess",
-        payload: data.message,
-      });
-    } catch (error) {
-      dispatch({
-        type: "AddProjectFailure",
-        payload: error.response.data.message,
-      });
-    }
-  };
+        dispatch({
+          type: "AddProjectSuccess",
+          payload: data.message,
+        });
+      } catch (error) {
+        dispatch({
+          type: "AddProjectFailure",
+          payload: error.response.data.message,
+        });
+      }
+    };
 export const updateProject =
   (
     title,
@@ -443,43 +448,43 @@ export const updateProject =
     image,
     id
   ) =>
-  async (dispatch) => {
-    try {
-      dispatch({
-        type: "UpdateProjectRequest",
-      });
+    async (dispatch) => {
+      try {
+        dispatch({
+          type: "UpdateProjectRequest",
+        });
 
-      const { data } = await axios.put(
-        `${server}/user/updateproject/${id}`,
-        {
-          title,
-          description,
-          tech_stack,
-          start_date,
-          end_date,
-          repository_url,
-          live_url,
-          image,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
+        const { data } = await axios.put(
+          `${server}/user/updateproject/${id}`,
+          {
+            title,
+            description,
+            tech_stack,
+            start_date,
+            end_date,
+            repository_url,
+            live_url,
+            image,
           },
-          withCredentials: true,
-        }
-      );
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+            withCredentials: true,
+          }
+        );
 
-      dispatch({
-        type: "UpdateProjectSuccess",
-        payload: data.message,
-      });
-    } catch (error) {
-      dispatch({
-        type: "UpdateProjectFailure",
-        payload: error.response.data.message,
-      });
-    }
-  };
+        dispatch({
+          type: "UpdateProjectSuccess",
+          payload: data.message,
+        });
+      } catch (error) {
+        dispatch({
+          type: "UpdateProjectFailure",
+          payload: error.response.data.message,
+        });
+      }
+    };
 
 export const deleteProject = (id) => async (dispatch) => {
   try {
