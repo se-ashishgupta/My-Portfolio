@@ -22,20 +22,20 @@ const Header = () => {
     },
     {
       title: "Github",
-      url: "https://www.linkedin.com/in/se-ashishgupta",
+      url: "https://www.github.com/in/se-ashishgupta",
       icon1: <AiOutlineGithub />,
+      icon2: <AiFillGithub />,
+    },
+    {
+      title: "Instagram",
+      url: "https://www.instagram.com/in/se-ashishgupta",
+      icon1: <AiOutlineInstagram />,
       icon2: <AiFillLinkedin />,
     },
     {
-      title: "Github",
-      url: "https://www.linkedin.com/in/se-ashishgupta",
-      icon1: <AiOutlineGithub />,
-      icon2: <AiFillLinkedin />,
-    },
-    {
-      title: "Github",
-      url: "https://www.linkedin.com/in/se-ashishgupta",
-      icon1: <AiOutlineGithub />,
+      title: "Facebook",
+      url: "https://www.facebook.com/in/se-ashishgupta",
+      icon1: <AiOutlineFacebook />,
       icon2: <AiFillLinkedin />,
     },
   ];
@@ -44,16 +44,19 @@ const Header = () => {
   return (
     <>
       {/* social Media  */}
-      <div className="absolute top-3 right-2 flex gap-4 px-2 py-1">
+      <div className="absolute top-3 right-2 flex flex-col gap-4 px-2 py-1">
         {socialMedia.length > 0 &&
           socialMedia.map((item, index) => (
-            <a
-              href={item.url}
-              target="blank"
-              className={` text-white hover:bg-primary_color p-2 rounded-full border-2 border-primary_color transition-all duration-300   `}
-            >
-              <figure className=" text-2xl">{item.icon1}</figure>
-            </a>
+            <>
+              <a
+                key={index}
+                href={item.url}
+                target="blank"
+                className={` text-white hover:bg-primary_color p-2 rounded-full border-2 border-primary_color transition-all duration-300   `}
+              >
+                <figure className=" text-2xl">{item.icon1}</figure>
+              </a>
+            </>
           ))}
       </div>
     </>

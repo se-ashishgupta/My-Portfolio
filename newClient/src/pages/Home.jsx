@@ -9,7 +9,7 @@ const Home = () => {
     <div className="">
       {/* FrontPage Of Home */}
       <div
-        className="grid md:grid-cols-2 min-h-[100vh] px-5 md:pl-10 py-10 gap-8 transition-all duration-300"
+        className="w-full bg-fixed grid md:grid-cols-2 min-h-[100vh] px-5 md:pl-10 py-10 gap-8 transition-all duration-300"
         style={{
           backgroundImage: `url(https://wallpapercrafter.com/sizes/2048x1152/87115-lines-simple-background-abstract-hd-4k-dark-black-dribbble-oled.jpg)`,
           backgroundSize: "cover",

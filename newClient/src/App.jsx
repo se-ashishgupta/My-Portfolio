@@ -16,7 +16,7 @@ const App = () => {
   return (
     <Router>
       <Sidebar />
-      <Header />
+      {/* <Header /> */}
       <div className="md:ml-[6rem]  text-white transition-all duration-300">
         <Routes>
           <Route path="/" element={<Home />} />
