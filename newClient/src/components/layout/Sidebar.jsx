@@ -149,6 +149,13 @@ const Sidebar = () => {
             </Link>
           ))}
         </div>
+
+
+        <div className=" absolute bottom-2 left-3">
+          <button className=" text-white  font-semibold tracking-wide bg-primary_color px-3 py-1 border-2 border-primary_color rounded-lg hover:bg-transparent transition-all duration-300">
+            Email
+          </button>
+        </div>
       </div>
 
       {/* Overlay */}
@@ -160,7 +167,7 @@ const Sidebar = () => {
 
       {/* MenuBar Icon  */}
       <div
-        className="text-white absolute top-4 left-4 bg-primary_color p-2 rounded-full text-2xl border-2 border-primary_color hover:bg-transparent cursor-pointer transition-all duration-300 md:translate-x-[-150%] "
+        className="text-white fixed top-4 left-4 bg-primary_color p-2 rounded-full text-2xl border-2 border-primary_color hover:bg-transparent cursor-pointer transition-all duration-300 md:translate-x-[-150%] z-10"
         onClick={() => setSideBarOpen(!sideBarOpen)}
       >
         <BiMenuAltLeft />
@@ -168,7 +175,7 @@ const Sidebar = () => {
 
       {/*Phone View Sidebar*/}
       <div
-        className={`bg-secondary_color absolute w-[14rem] top-0 h-full px-4 py-6 ${sideBarOpen ? "left-0" : "-left-96"
+        className={`bg-secondary_color fixed w-[14rem] top-0 h-full px-4 py-6 ${sideBarOpen ? "left-0" : "-left-96"
           } transition-all duration-300 z-10`}
       >
 
@@ -183,25 +190,27 @@ const Sidebar = () => {
         </div>
 
         {/* Nav content  */}
-        <div className=" py-[3rem] flex flex-col item-center justify-between h-full">
-
-          {/* Logo  */}
-          <div className="w-full flex items-center justify-center">
-            <img src={Logo} alt="ashishgupta" className="h-[6rem] w-[6rem] border-4 border-primary_color rounded-full" />
-          </div>
-
-          {/* Nav Item  */}
-          <div className="flex items-center justify-center">
-            <div className="flex flex-col gap-4 items-center justify-center">
-              {navItem.map((item, index) => (
-                <>
-                  <Link to={item.path} onClick={() => navItemHandler(item.path)} className={`text-2xl tracking-wide pb-1 hover:text-primary_color hover:font-bold transition-all ease-linear duration-300 hover:scale-110 relative after:content-[''] after:bg-white after:h-[2.5px] after:w-full after:absolute after:bottom-0 after:left-0 after:scale-0 hover:after:scale-100 after:origin-center after:transition-transform after:duration-300 ${path == item.path ? "font-bold after:scale-100 text-primary_color" : "text-white "}`}>
-                    {item.title}
-                  </Link >
-                </>
-              ))
-              }
+        <div className=" py-[4rem] flex flex-col item-center justify-between h-full">
+          <div className=" space-y-10">
+            {/* Logo  */}
+            <div className="w-full flex items-center justify-center">
+              <img src={Logo} alt="ashishgupta" className="h-[6rem] w-[6rem] border-4 border-primary_color rounded-full" />
             </div>
+
+            {/* Nav Item  */}
+            <div className="flex items-center justify-center">
+              <div className="flex flex-col gap-3 items-center justify-center">
+                {navItem.map((item, index) => (
+                  <>
+                    <Link to={item.path} onClick={() => navItemHandler(item.path)} className={`text-2xl tracking-wide pb-1 hover:text-primary_color hover:font-bold transition-all ease-linear duration-300 hover:scale-110 relative after:content-[''] after:bg-white after:h-[2.5px] after:w-full after:absolute after:bottom-0 after:left-0 after:scale-0 hover:after:scale-100 after:origin-center after:transition-transform after:duration-300 ${path == item.path ? "font-bold after:scale-100 text-primary_color" : "text-white "}`}>
+                      {item.title}
+                    </Link >
+                  </>
+                ))
+                }
+              </div>
+            </div>
+
           </div>
 
 

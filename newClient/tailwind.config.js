@@ -8,6 +8,7 @@ export default {
         secondary_color: "#16181f",
         gray_color: "#9ca3af",
         text_color1: "#858585",
+
       },
     },
   },

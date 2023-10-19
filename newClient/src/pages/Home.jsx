@@ -3,6 +3,10 @@ import Typewriter from "typewriter-effect";
 import Logo from "../assets/images/Logo1.png";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import About from "../components/home/About";
+import { motion } from "framer-motion";
+import { AnimationData } from "../utils/animationData";
+
 
 const Home = () => {
   return (
@@ -19,22 +23,22 @@ const Home = () => {
         {/* Left */}
         <div className=" flex flex-col gap-6 items-center md:items-start justify-center md:-order-1 order-1 ">
           {/* Welcome  */}
-          <div>
+          <motion.div {...AnimationData.slidDown}>
             <h1 className="lg:text-xl text-gray_color uppercase">
               Welcome To My World
             </h1>
-          </div>
+          </motion.div>
 
           {/* Name  */}
-          <div className="text-center md:text-left text-white font-bold text-4xl lg:text-5xl xl:text-6xl space-y-2">
+          <motion.div {...AnimationData.slideLeftDelay} className="text-center md:text-left text-white font-bold text-4xl lg:text-5xl xl:text-6xl space-y-2">
             <h1>Hi, I'm</h1>
             <h1>
               Ashsih <span className=" text-primary_color">Gupta</span>
             </h1>
-          </div>
+          </motion.div>
 
           {/* TypeWriiter Effect  */}
-          <div>
+          <motion.div {...AnimationData.slideUp}>
             <h1 className=" text-primary_color text-xl">
               <Typewriter
                 options={{
@@ -48,7 +52,7 @@ const Home = () => {
                 }}
               />
             </h1>
-          </div>
+          </motion.div>
 
           {/* Buttons  */}
           <div className="my-4 flex flex-col md:flex-row gap-10 text-xl font-semibold">
@@ -61,7 +65,7 @@ const Home = () => {
 
             <Link
               to={"/projects"}
-              className="px-4 py-2 border-2 border-primary_color hover:bg-transparent transition-all duration-300 rounded-l-lg rounded-br-lg"
+              className="px-4 py-2 border-2 border-primary_color transition-all duration-300 rounded-l-lg rounded-br-lg"
             >
               <span className=" flex items-center gap-2">
                 {" "}
@@ -90,14 +94,17 @@ const Home = () => {
 
         {/* Right  */}
 
-        <div className="relative grid place-items-center mt-4">
+        <motion.div {...AnimationData.slideLeft} className="relative grid place-items-center mt-4">
           <div className="w-[25vmax] h-[25vmax] sm:w-[35vmax] sm:h-[35vmax] xl:w-[35vmax] xl:h-[35vmax] rounded-full border-[0.8rem] sm:border-[1.5rem] border-primary_color transition-shadow shadow-2xl shadow-primary_color overflow-hidden animate-pulse">
             <img src={Logo} alt="" className="h-full w-full" />
           </div>
-        </div>
+        </motion.div>
+
       </div>
 
-      <div className="h-[100vh] pl-10 px-5">gyudfgdfgfdgdjuyt</div>
+      {/* About  */}
+      <About />
+
     </div>
   );
 };
