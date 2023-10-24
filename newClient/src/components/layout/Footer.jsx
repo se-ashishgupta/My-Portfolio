@@ -7,7 +7,7 @@ import { BiLocationPlus, BiPhoneCall, BiWorld } from "react-icons/bi";
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { AnimationData } from "../../utils/animationData";
 import { motion } from "framer-motion";
-import logo from "../../assets/images/logo1.png";
+import logo from "../../assets/images/Logo1.png";
 
 const Footer = () => {
   const { setActiveUrl } = useMyContext();
