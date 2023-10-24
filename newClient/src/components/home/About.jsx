@@ -11,7 +11,7 @@ import { BsBoxArrowUpRight } from 'react-icons/bs';
 
 const About = () => {
     return (
-        <div className='min-h-[100vh] px-6 md:px-10 py-20 transition-all duration-300 '>
+        <div className='px-6 md:px-10 py-20 transition-all duration-300 '>
             <div className="w-full flex items-center gap-[8rem] lg:gap-[4rem] xl:gap-[8rem] flex-col-reverse lg:flex-row transition-all duration-300">
                 {/* Left About Contet  */}
                 <div className=" lg:w-[50%]">

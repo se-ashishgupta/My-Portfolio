@@ -15,12 +15,18 @@ import {
   PiProjectorScreenChartLight,
   PiProjectorScreenChartFill,
 } from "react-icons/pi";
-import { BsSignpostSplit, BsSignpostSplitFill } from "react-icons/bs";
+import { BsPersonWorkspace, BsSignpostSplit, BsSignpostSplitFill } from "react-icons/bs";
 import { BiMenuAltLeft } from "react-icons/bi";
 import Logo from "../../assets/images/Logo1.png";
 
 const Sidebar = () => {
   const navItem = [
+    {
+      title: "Experiance",
+      path: "/experiance",
+      icon1: <BsPersonWorkspace />,
+      icon2: <PiProjectorScreenChartFill />,
+    },
     {
       title: "Projects",
       path: "/projects",
@@ -108,18 +114,18 @@ const Sidebar = () => {
   return (
     <>
       {/* Desktop view Sidebar  */}
-      <div className="h-full fixed top-0 left-0 -translate-x-96 md:translate-x-0 transition-all duration-300">
+      <div className="h-full fixed top-0 left-0 -translate-x-96 md:translate-x-0 transition-all duration-300 z-20">
         {/* Logo  */}
-        <div className="absolute top-6 left-3 w-[4rem] h-[4rem] text-xl font-bold bg-opacity-70 p-2 rounded-full shadow-lg shadow-primary_color border-2 border-primary_color">
+        <div className="absolute top-6 left-3 w-[4rem] h-[4rem] font-bold bg-opacity-70 rounded-full shadow-lg shadow-primary_color border-2 border-primary_color  overflow-hidden">
           <Link to={"/"} className=" ">
-            <img src={Logo} alt="" className="h-full w-full" />
+            <img src={Logo} alt="logo" className="h-full w-full" />
           </Link>
         </div>
 
         {/* Menu Item List  */}
         <div className="py-10 absolute left-0 top-[50%] translate-y-[-50%] flex flex-col gap-8 group">
           {/* Overlay on Hover  */}
-          <div className=" bg-black bg-opacity-60 group-hover:w-[15rem] absolute left-0 top-[50%] h-[120%] translate-y-[-50%] opacity-0 group-hover:opacity-100 blur-3xl -z-10"></div>
+          <div className=" bg-black bg-opacity-70 group-hover:w-[15rem] absolute left-0 top-[50%] h-[120%] translate-y-[-50%] opacity-0 group-hover:opacity-100  blur-3xl -z-10"></div>
 
           {/* Nav Item  */}
           {navItem.map((item, index) => (
@@ -150,8 +156,8 @@ const Sidebar = () => {
           ))}
         </div>
 
-
-        <div className=" absolute bottom-2 left-3">
+        {/* Email Button  */}
+        <div className=" absolute bottom-6 left-3">
           <button className=" text-white  font-semibold tracking-wide bg-primary_color px-3 py-1 border-2 border-primary_color rounded-lg hover:bg-transparent transition-all duration-300">
             Email
           </button>
@@ -176,7 +182,7 @@ const Sidebar = () => {
       {/*Phone View Sidebar*/}
       <div
         className={`bg-secondary_color fixed w-[14rem] top-0 h-full px-4 py-6 ${sideBarOpen ? "left-0" : "-left-96"
-          } transition-all duration-300 z-10`}
+          } transition-all duration-300 z-20`}
       >
 
         {/* Close Button Icon  */}

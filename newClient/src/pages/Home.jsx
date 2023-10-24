@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import About from "../components/home/About";
 import { motion } from "framer-motion";
 import { AnimationData } from "../utils/animationData";
+import Experiance from "../components/home/Experiance";
 
 
 const Home = () => {
@@ -30,7 +31,7 @@ const Home = () => {
           </motion.div>
 
           {/* Name  */}
-          <motion.div {...AnimationData.slideLeftDelay} className="text-center md:text-left text-white font-bold text-4xl lg:text-5xl xl:text-6xl space-y-2">
+          <motion.div {...AnimationData.slideLeftDelay} className="z-10 text-center md:text-left text-white font-bold text-4xl lg:text-5xl xl:text-6xl space-y-2">
             <h1>Hi, I'm</h1>
             <h1>
               Ashsih <span className=" text-primary_color">Gupta</span>
@@ -104,6 +105,9 @@ const Home = () => {
 
       {/* About  */}
       <About />
+
+      {/* Experiance  */}
+      <Experiance />
 
     </div>
   );
