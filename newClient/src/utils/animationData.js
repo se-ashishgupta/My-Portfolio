@@ -38,7 +38,7 @@ export const AnimationData = {
     },
   },
   slideUp: {
-    initial: { y: "50%", opacity: 0 },
+    initial: { y: "100%", opacity: 0 },
     whileInView: { y: 0, opacity: 1 },
     viewport: { once: true },
     transition: {
@@ -47,7 +47,7 @@ export const AnimationData = {
     },
   },
   slideUpDelay: {
-    initial: { y: "50%", opacity: 0 },
+    initial: { y: "100%", opacity: 0 },
     whileInView: { y: 0, opacity: 1 },
     viewport: { once: true },
     transition: {

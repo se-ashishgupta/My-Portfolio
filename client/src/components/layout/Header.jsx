@@ -73,6 +73,7 @@ const NavContent = ({ setMenuOpen }) => {
       <div>
         {navItem.map((item, index) => (
           <Link
+            key={index}
             onClick={() => menuClickHandler(item.to)}
             to={item.to}
             style={{ "--i": index }}

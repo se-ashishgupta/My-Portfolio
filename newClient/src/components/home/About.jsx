@@ -30,7 +30,7 @@ const About = () => {
                         </motion.h1>
                     </div>
 
-                    <div className='text-gray_color'>
+                    <div className='text-text_color1'>
                         <p
                             className="my-4 text-justify "
                             style={{

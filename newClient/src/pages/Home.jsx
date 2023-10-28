@@ -7,6 +7,7 @@ import About from "../components/home/About";
 import { motion } from "framer-motion";
 import { AnimationData } from "../utils/animationData";
 import Experiance from "../components/home/Experiance";
+import Projects from "../components/home/Projects";
 
 
 const Home = () => {
@@ -108,6 +109,9 @@ const Home = () => {
 
       {/* Experiance  */}
       <Experiance />
+
+      {/* Experiance  */}
+      <Projects />
 
     </div>
   );

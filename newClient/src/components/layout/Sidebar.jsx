@@ -114,7 +114,7 @@ const Sidebar = () => {
   return (
     <>
       {/* Desktop view Sidebar  */}
-      <div className="h-full fixed top-0 left-0 -translate-x-96 md:translate-x-0 transition-all duration-300 z-20">
+      <div className="h-full fixed top-0 left-0 -translate-x-96 md:translate-x-0 transition-all duration-300 z-30">
         {/* Logo  */}
         <div className="absolute top-6 left-3 w-[4rem] h-[4rem] font-bold bg-opacity-70 rounded-full shadow-lg shadow-primary_color border-2 border-primary_color  overflow-hidden">
           <Link to={"/"} className=" ">

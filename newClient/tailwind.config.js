@@ -7,7 +7,8 @@ export default {
         primary_color: "#07a8ad",
         secondary_color: "#16181f",
         gray_color: "#9ca3af",
-        text_color1: "#858585",
+        text_color1: "#9ca3af",
+        pink_color: "#fdf2f8"
 
       },
     },
