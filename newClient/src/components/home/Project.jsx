@@ -125,14 +125,21 @@ const Projects = () => {
     };
     return (
         <div className="px-6 md:px-10 py-20 transition-all duration-300">
-            <div className="mb-5">
-                <div className="mx-[15px] flex items-center justify-between ">
-                    <div>
-                        <h3 className="font-[cursive] text-primary_color text-xl">
-                            Projects
-                        </h3>
-                    </div>
 
+            <div className="mx-[15px]">
+                <h3 className="font-[cursive] text-primary_color text-xl">
+                    Projects
+                </h3>
+
+                <div className="flex items-center justify-between ">
+                    <div>
+                        <motion.h1
+                            {...AnimationData.slideUp}
+                            className="opacity-0  font-medium text-3xl lg:text-5xl my-6 text-white"
+                        >
+                            Work Experiance
+                        </motion.h1>
+                    </div>
 
                     <Link
                         to={"/projects"}
@@ -141,7 +148,10 @@ const Projects = () => {
                         View All  <BsBoxArrowUpRight />
                     </Link>
                 </div>
+
             </div>
+
+
             <Slider {...settings}>
                 {eventDetails.map((item, index) => (
                     <Card item={item} key={index} />
@@ -159,7 +169,7 @@ const Card = ({ item }) => (
                     <img
                         src={item.thumbnail}
                         alt={item.name}
-                        className="w-[100%] h-[100%] hover:scale-105 transition-all duration-500 ease-linear "
+                        className="w-[100%] h-[100%] hover:scale-105 transition-all duration-300 ease-linear "
                     />
                 </Link>
 

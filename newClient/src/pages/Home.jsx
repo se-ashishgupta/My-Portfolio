@@ -7,7 +7,9 @@ import About from "../components/home/About";
 import { motion } from "framer-motion";
 import { AnimationData } from "../utils/animationData";
 import Experiance from "../components/home/Experiance";
-import Projects from "../components/home/Projects";
+import Project from "../components/home/Project";
+import Skill from "../components/home/Skill";
+import Blog from "../components/home/Blog";
 
 
 const Home = () => {
@@ -110,8 +112,15 @@ const Home = () => {
       {/* Experiance  */}
       <Experiance />
 
-      {/* Experiance  */}
-      <Projects />
+      {/* Projects  */}
+      <Project />
+
+      {/* Skill  */}
+      <Skill />
+
+
+      {/* Blog  */}
+      <Blog />
 
     </div>
   );
