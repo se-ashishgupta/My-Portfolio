@@ -4,12 +4,14 @@ import { SiMinds } from "react-icons/si";
 import { motion } from "framer-motion";
 import { AnimationData } from "../../utils/animationData";
 import avatar from "../../assets/images/Logo1.png";
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { BsBoxArrowUpRight } from 'react-icons/bs';
 
 
 
 const About = () => {
+    const url = window.location.pathname;
+
     return (
         <div className='px-6 md:px-10 py-20 transition-all duration-300 '>
             <div className="w-full flex items-center gap-[8rem] lg:gap-[4rem] xl:gap-[8rem] flex-col-reverse lg:flex-row transition-all duration-300">
@@ -84,14 +86,18 @@ const About = () => {
                             watch your life flourish”
                         </p>
 
-                        <Link
-                            to={"/about"}
-                            className="w-max px-4 py-2 border-2 border-primary_color hover:bg-primary_color transition-all duration-300 rounded-l-lg rounded-br-lg"
-                        >
-                            <span className=" flex items-center gap-2">
-                                Know More <BsBoxArrowUpRight />
-                            </span>
-                        </Link>
+                        {
+                            url === "/about" ? <></> : <>
+                                <Link
+                                    to={"/about"}
+                                    className="w-max px-4 py-2 border-2 border-primary_color hover:bg-primary_color transition-all duration-300 rounded-l-lg rounded-br-lg"
+                                >
+                                    <span className=" flex items-center gap-2">
+                                        Know More <BsBoxArrowUpRight />
+                                    </span>
+                                </Link>
+                            </>
+                        }
                     </div>
 
                     <div>

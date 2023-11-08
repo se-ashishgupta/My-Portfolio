@@ -60,7 +60,7 @@ const Experiance = () => {
         <div className='min-h-[100vh] px-6 md:px-10 py-12 transition-all duration-300 '>
             <div className='pb-4'>
                 <div>
-                    <h3 className="font-[cursive] text-primary_color text-xl  my-4">
+                    <h3 className="font-[cursive] text-primary_color text-xl">
                         Experiance
                     </h3>
                 </div>
@@ -68,7 +68,7 @@ const Experiance = () => {
                 <div>
                     <motion.h1
                         {...AnimationData.slideLeft}
-                        className="opacity-0  font-medium text-3xl lg:text-5xl my-6 text-white"
+                        className="opacity-0  font-medium text-3xl lg:text-5xl my-4 sm:my-6 text-white"
                     >
                         Work Experiance
                     </motion.h1>
@@ -115,9 +115,9 @@ const TimelineItem = ({ experianceData }) => (
                                 <span className=' text-text_color1'>{`| ${item.location}, ${item.country}`}</span>
                             </h1>
 
-                            <div className='py-2 flex flex-col text-lg'>
+                            <div className='py-2 flex flex-col text-sm'>
                                 {
-                                    (item.description.slice(0, 3)).map((i, idx) => (
+                                    (item.description.slice(0, 2)).map((i, idx) => (
                                         <p key={idx} className='text-text_color1 flex items-baseline gap-2' style={{
                                             wordSpacing: "1px",
                                             letterSpacing: "1px"

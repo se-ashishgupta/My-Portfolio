@@ -123,9 +123,9 @@ const Sidebar = () => {
         </div>
 
         {/* Menu Item List  */}
-        <div className="py-10 absolute left-0 top-[50%] translate-y-[-50%] flex flex-col gap-8 group">
+        <div className="py-10 absolute left-0 top-[50%] translate-y-[-50%] flex flex-col gap-6 group">
           {/* Overlay on Hover  */}
-          <div className=" bg-black bg-opacity-70 group-hover:w-[15rem] absolute left-0 top-[50%] h-[120%] translate-y-[-50%] opacity-0 group-hover:opacity-100  blur-3xl -z-10"></div>
+          <div className=" bg-black bg-opacity-70 group-hover:w-[15rem] absolute left-0 top-[50%] h-[120%] translate-y-[-50%] opacity-0 group-hover:opacity-100 blur-3xl -z-10"></div>
 
           {/* Nav Item  */}
           {navItem.map((item, index) => (
@@ -136,7 +136,7 @@ const Sidebar = () => {
               onClick={() => setPath(item.path)}
             >
               <div
-                className={`flex hover:text-primary_color hover:font-bold transition-all duration-0  ${path == item.path ? "text-primary_color" : ""
+                className={`flex hover:text-primary_color  transition-all duration-0  ${path == item.path ? "text-primary_color" : ""
                   }`}
               >
                 <figure className={`text-2xl `}>

@@ -135,9 +135,9 @@ const Projects = () => {
                     <div>
                         <motion.h1
                             {...AnimationData.slideUp}
-                            className="opacity-0  font-medium text-3xl lg:text-5xl my-6 text-white"
+                            className="opacity-0  font-medium text-3xl lg:text-5xl my-4 sm:my-6 text-white"
                         >
-                            Work Experiance
+                            My Projects
                         </motion.h1>
                     </div>
 
@@ -152,7 +152,7 @@ const Projects = () => {
             </div>
 
 
-            <Slider {...settings}>
+            <Slider {...settings} >
                 {eventDetails.map((item, index) => (
                     <Card item={item} key={index} />
                 ))}
@@ -162,16 +162,16 @@ const Projects = () => {
 };
 
 const Card = ({ item }) => (
-    <div className="max-w-[800px]">
-        <div className="mb-[2.5rem] m-[10px] xl:m-[15px]  border-2 border-primary_color rounded-sm shadow-lg shadow-primary_color p-2">
-            <div className=" w-full h-[18rem]  overflow-hidden relative rounded-lg ">
-                <Link to={""} className="overflow-hidden">
+    <div className="max-w-[800px] mb-6">
+        <div className="mb-[2.5rem] m-[10px] xl:m-[15px]  border-2 border-primary_color rounded-sm shadow-lg shadow-primary_color ">
+            <div className="w-full h-[18rem] overflow-hidden relative ">
+                <div to={""} target="blank" className="overflow-hidden h-full">
                     <img
                         src={item.thumbnail}
                         alt={item.name}
                         className="w-[100%] h-[100%] hover:scale-105 transition-all duration-300 ease-linear "
                     />
-                </Link>
+                </div>
 
                 <a href="/" target="blank" className=" absolute top-4 right-4 text-3xl text-primary_color bg-secondary_color p-2 rounded-full border-2 border-primary_color hover:bg-transparent transition-all duration-300">
                     <BsGithub />
