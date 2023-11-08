@@ -108,9 +108,9 @@ const About = () => {
                 {/* Right About Banner */}
                 <motion.div
                     {...AnimationData.slideLeft}
-                    className="w-[100%] sm:w-[80%] lg:flex-1 relative h-[80vh] xl:h-[85vh]"
+                    className="lg:flex-1 relative h-[60vh] xl:h-[60vh]"
                 >
-                    <div className=" h-[100%] md:h-full  rounded-l-[3rem] border-[1rem] border-primary_color shadow-2xl shadow-primary_color" >
+                    <div className="mx-auto w-[100%] sm:w-[65%]  h-[100%] md:h-full  rounded-l-[3rem] border-[1rem] border-primary_color shadow-2xl shadow-primary_color" >
                         <img
                             src={avatar}
                             alt="about us"
@@ -118,7 +118,7 @@ const About = () => {
                         />
                     </div>
 
-                    <div className="absolute -bottom-16 left-0 w-[60%] sm:w-[50%] h-[25%] bg-secondary_color border-[0.8rem] border-white rounded-r-[3rem] rounded-tl-[3rem] text-white text-center grid place-items-center ">
+                    <div className="absolute -bottom-16 left-0 sm:left-[12%] w-[60%] sm:w-[40%] h-[25%] bg-secondary_color border-[0.8rem] border-white rounded-r-[3rem] rounded-tl-[3rem] text-white text-center grid place-items-center ">
                         <div>
                             <h1 className="text-3xl sm:text-5xl font-bold relative">
                                 1 <span className="text-4xl absolute ">+</span>
