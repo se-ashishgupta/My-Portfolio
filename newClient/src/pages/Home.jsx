@@ -27,14 +27,14 @@ const Home = () => {
         {/* Left */}
         <div className=" flex flex-col gap-6 items-center md:items-start justify-center md:-order-1 order-1 ">
           {/* Welcome  */}
-          <motion.div {...AnimationData.slidDown}>
+          <motion.div >
             <h1 className="lg:text-xl text-gray_color uppercase">
               Welcome To My World
             </h1>
           </motion.div>
 
           {/* Name  */}
-          <motion.div {...AnimationData.slideLeftDelay} className="z-10 text-center md:text-left text-white font-bold text-4xl lg:text-5xl xl:text-6xl space-y-2">
+          <motion.div className="z-10 text-center md:text-left text-white font-bold text-4xl lg:text-5xl xl:text-6xl space-y-2">
             <h1>Hi, I'm</h1>
             <h1>
               Ashsih <span className=" text-primary_color">Gupta</span>
@@ -42,7 +42,7 @@ const Home = () => {
           </motion.div>
 
           {/* TypeWriiter Effect  */}
-          <motion.div {...AnimationData.slideUp}>
+          <motion.div >
             <h1 className=" text-primary_color text-xl">
               <Typewriter
                 options={{
@@ -98,7 +98,7 @@ const Home = () => {
 
         {/* Right  */}
 
-        <motion.div {...AnimationData.slideLeft} className="relative grid place-items-center mt-4">
+        <motion.div className="relative grid place-items-center mt-4">
           <div className="w-[25vmax] h-[25vmax] sm:w-[35vmax] sm:h-[35vmax] xl:w-[35vmax] xl:h-[35vmax] rounded-full border-[0.8rem] sm:border-[1.5rem] border-primary_color transition-shadow shadow-2xl shadow-primary_color overflow-hidden animate-pulse">
             <img src={Logo} alt="" className="h-full w-full" />
           </div>

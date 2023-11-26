@@ -134,8 +134,8 @@ const Projects = () => {
                 <div className="flex items-center justify-between ">
                     <div>
                         <motion.h1
-                            {...AnimationData.slideUp}
-                            className="opacity-0  font-medium text-3xl lg:text-5xl my-4 sm:my-6 text-white"
+
+                            className="font-medium text-3xl lg:text-5xl my-4 sm:my-6 text-white"
                         >
                             My Projects
                         </motion.h1>

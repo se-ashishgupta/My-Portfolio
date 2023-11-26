@@ -25,8 +25,8 @@ const About = () => {
 
                     <div>
                         <motion.h1
-                            {...AnimationData.slideUp}
-                            className="opacity-0  font-medium text-3xl lg:text-5xl my-6 text-white"
+
+                            className="font-medium text-3xl lg:text-5xl my-6 text-white"
                         >
                             Software Developer
                         </motion.h1>
@@ -107,7 +107,7 @@ const About = () => {
 
                 {/* Right About Banner */}
                 <motion.div
-                    {...AnimationData.slideLeft}
+
                     className="lg:flex-1 relative h-[60vh] xl:h-[60vh]"
                 >
                     <div className="mx-auto w-[100%] sm:w-[65%]  h-[100%] md:h-full  rounded-l-[3rem] border-[1rem] border-primary_color shadow-2xl shadow-primary_color" >

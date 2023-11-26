@@ -3,6 +3,8 @@ import { AnimationData } from '../../utils/animationData';
 import { motion } from "framer-motion";
 import { FaPencilAlt } from "react-icons/fa";
 import { IoMdArrowDropright } from "react-icons/io";
+import { BsBoxArrowUpRight } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
 
 const Experiance = () => {
     const experianceData = [
@@ -65,13 +67,23 @@ const Experiance = () => {
                     </h3>
                 </div>
 
-                <div>
-                    <motion.h1
-                        {...AnimationData.slideLeft}
-                        className="opacity-0  font-medium text-3xl lg:text-5xl my-4 sm:my-6 text-white"
+
+                <div className="flex items-center justify-between ">
+                    <div>
+                        <h1
+
+                            className="font-medium text-3xl lg:text-5xl my-4 sm:my-6 text-white"
+                        >
+                            Work Experiance
+                        </h1>
+                    </div>
+
+                    <Link
+                        to={"/experiance"}
+                        className="flex items-center gap-2 border-b-[1px] font-bold sn:text-xl "
                     >
-                        Work Experiance
-                    </motion.h1>
+                        View All  <BsBoxArrowUpRight />
+                    </Link>
                 </div>
             </div>
 
@@ -90,10 +102,10 @@ const TimelineItem = ({ experianceData }) => (
             <div className='w-7 h-7 border-2 bg-white rounded-full absolute -bottom-2 left-2 z-10 animate-bounce'></div>
         </div>
 
-        <div className='pl-14 sm:px-14 flex flex-col gap-20' >
+        <div className='pl-14 sm:px-14 flex flex-col gap-10 md:gap-20' >
             {
                 experianceData.map((item, index) => (
-                    <motion.div key={index} className='w-full min-h-52 border-2 border-primary_color relative rounded-sm shadow-lg shadow-primary_color' {...AnimationData.slideUp}>
+                    <motion.div key={index} className='w-full min-h-52 border-2 border-primary_color relative rounded-sm shadow-lg shadow-primary_color' >
                         {/* Pencil Icon */}
                         <div className=' border-2 bg-pink_color rounded-full absolute -top-2 -left-14 z-10'>
                             <figure className={`${index % 2 == 0 ? "text-primary_color " : "text-secondary_color "} text-2xl p-2`}>
@@ -115,9 +127,9 @@ const TimelineItem = ({ experianceData }) => (
                                 <span className=' text-text_color1'>{`| ${item.location}, ${item.country}`}</span>
                             </h1>
 
-                            <div className='py-2 flex flex-col text-sm'>
+                            <div className='py-2 flex flex-col text-sm  '>
                                 {
-                                    (item.description.slice(0, 2)).map((i, idx) => (
+                                    (item.description.slice(0, 1)).map((i, idx) => (
                                         <p key={idx} className='text-text_color1 flex items-baseline gap-2' style={{
                                             wordSpacing: "1px",
                                             letterSpacing: "1px"

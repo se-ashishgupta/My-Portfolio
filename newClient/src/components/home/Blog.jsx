@@ -39,8 +39,8 @@ const Blog = () => {
                 <div className="flex items-center justify-between ">
                     <div>
                         <motion.h1
-                            {...AnimationData.slideUp}
-                            className="opacity-0  font-medium text-3xl lg:text-5xl my-6 text-white"
+
+                            className="font-medium text-3xl lg:text-5xl my-6 text-white"
                         >
                             Recent Blog
                         </motion.h1>
