@@ -3,11 +3,24 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 body {
-  background-color: #16181f;
+  /* background-color: #16181f; */
+  background: linear-gradient(
+    90deg,
+    rgba(22, 24, 31, 1) 65%,
+    rgba(54, 61, 61, 1) 100%
+  );
+}
+.gradientOne {
+  /* background-color: #16181f; */
+  background: linear-gradient(
+    90deg,
+    rgba(22, 24, 31, 1) 48%,
+    rgba(54, 61, 61, 1) 100%
+  );
 }
 
 ::-webkit-scrollbar {

@@ -6,7 +6,7 @@ export const ActiveLinkContext = ({ children }) => {
     const [activeUrl, setActiveUrl] = useState(location.pathname);
 
     return (
-        <MyContext.Provider value={{ activeUrl, setActiveUrl }} >{children}</ MyContext.Provider>
+        <MyContext.Provider value={{ activeUrl, setActiveUrl }} >{children}</MyContext.Provider>
     );
 };
 

@@ -1,6 +1,7 @@
 .adminpanel_container {
   background-color: $back_color;
-  > .adminpanel_content {
+
+  >.adminpanel_content {
     position: relative;
     margin: $topheader_height 0 0 0;
     padding: 0 1rem;
@@ -8,6 +9,7 @@
     transition: 0.5s;
   }
 }
+
 .adminpanel_content .topbar_header {
   position: fixed;
   top: 0;
@@ -23,22 +25,23 @@
 }
 
 .adminpanel_container .adminpanel_content {
-  > .topbar_header {
-    > .header_toggle {
+  >.topbar_header {
+    >.header_toggle {
       font-size: 2.2rem;
       font-weight: 900;
       cursor: pointer;
       color: $primary_color;
     }
 
-    > .header_item {
+    >.header_item {
       height: $topheader_height;
       display: flex;
       align-items: center;
       gap: 1rem;
       transition: all 0.3s;
-      > a {
-        > svg {
+
+      >a {
+        >svg {
           font-size: 2.6rem;
           color: $primary_color;
           border-radius: 50%;
@@ -46,7 +49,8 @@
           background-color: $back_color;
           border: 1px solid $back_color;
         }
-        > p {
+
+        >p {
           position: absolute;
           background-color: $primary_color_1;
           border-radius: 50%;
@@ -58,11 +62,13 @@
           font: 900 0.7rem "Roboto";
           transform: translate(1.2rem, -2rem);
         }
+
         &:hover svg {
           border: 1px solid $primary_color;
         }
       }
-      > img {
+
+      >img {
         width: 2.6rem;
         height: 2.6rem;
         padding: 5px;
@@ -70,12 +76,13 @@
         cursor: pointer;
         background-color: $back_color;
         border: 1px solid $back_color;
+
         &:hover {
           border: 1px solid $primary_color;
         }
       }
 
-      > .topbarWrapMenu {
+      >.topbarWrapMenu {
         position: absolute;
         top: 100%;
         right: 1%;
@@ -84,27 +91,29 @@
         overflow: hidden;
         transition: max-height 0.3s;
 
-        > .subMenu {
+        >.subMenu {
           background-color: $primary_color;
           padding: 15px;
           margin: 10px;
           border-radius: 5px;
 
-          > .userInfo {
+          >.userInfo {
             display: flex;
             align-items: center;
             gap: 1rem;
 
-            > img {
+            >img {
               width: 40px;
               border-radius: 50%;
             }
-            > h3 {
+
+            >h3 {
               font-weight: 500;
               color: $white_color;
             }
           }
-          > hr {
+
+          >hr {
             border: 0;
             height: 1px;
             width: 100%;
@@ -112,7 +121,7 @@
             margin: 1rem 0 0.7rem;
           }
 
-          > a {
+          >a {
             display: flex;
             align-items: center;
             color: $white_color;
@@ -120,22 +129,27 @@
             padding: 5px;
             letter-spacing: 1px;
 
-            > svg {
+            >svg {
               font-size: 2rem;
               margin-right: 1rem;
             }
-            > p {
+
+            >p {
               width: 100%;
             }
-            > span {
+
+            >span {
               font-size: 1.2rem;
               transition: transform 0.5s;
             }
+
             &:hover {
               p {
                 font-weight: bold;
               }
+
               background-color: $primary_color_1;
+
               span {
                 transform: translateX(5px);
               }
@@ -150,7 +164,7 @@
     }
   }
 
-  > .sidebar {
+  >.sidebar {
     position: fixed;
     top: 0;
     left: -30%;
@@ -159,12 +173,13 @@
     background-color: $primary_color;
     transition: 0.5s;
 
-    > .navbar_content {
+    >.navbar_content {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       overflow: hidden;
       min-height: 100vh;
+
       .sidebar_header {
         display: flex;
         align-items: center;
@@ -174,14 +189,14 @@
         margin-bottom: 2rem;
         width: 100%;
 
-        > h1 {
+        >h1 {
           color: $white_color;
           letter-spacing: 2px;
         }
       }
 
       .nav_list {
-        > a {
+        >a {
           display: flex;
           align-items: center;
           gap: 1.2rem;
@@ -197,19 +212,23 @@
             display: block;
             font-size: 1.7rem;
           }
-          > p {
+
+          >p {
             width: 100%;
           }
-          > span {
+
+          >span {
             font-size: 1.2rem;
             transition: transform 0.5s;
           }
 
           &:hover {
             background-color: $primary_color_1;
+
             p {
               font-weight: bold;
             }
+
             &::before {
               content: "";
               position: absolute;
@@ -220,6 +239,7 @@
               background-color: $white_color;
               transition: 0.5s;
             }
+
             span {
               transform: translateX(3px);
             }
@@ -228,9 +248,11 @@
 
         .active {
           background-color: $primary_color_1;
+
           p {
             font-weight: bold;
           }
+
           &::before {
             content: "";
             position: absolute;
@@ -241,6 +263,7 @@
             background-color: $white_color;
             transition: 0.5s;
           }
+
           span {
             transform: translateX(3px);
           }
@@ -263,6 +286,7 @@
   padding: 0.5rem 0;
   min-height: 100vh;
 }
+
 /* //Responsive */
 
 @media (min-width: 768px) {
@@ -270,6 +294,7 @@
     margin: calc($topheader_height + 1rem) 0 0 0;
     padding: 0 1rem 0 calc($sidebar_width + 2rem);
   }
+
   .adminpanel_content .topbar_header {
     height: calc($topheader_height + 1rem);
     padding-left: calc($sidebar_width + 2rem);
@@ -279,14 +304,11 @@
     left: 0;
     padding: 0 0 0 0;
   }
-  .adminpanel_container
-    .adminpanel_content
-    .sidebar
-    .navbar_content
-    .sidebar_header {
+
+  .adminpanel_container .adminpanel_content .sidebar .navbar_content .sidebar_header {
     height: calc($topheader_height + 1rem);
 
-    > .logo_img {
+    >.logo_img {
       width: 60px;
       height: 60px;
     }
@@ -295,6 +317,7 @@
   .adminpanel_container .adminpanel_content .slider {
     width: calc($sidebar_width + 168px);
   }
+
   .adminpanel_container .navbar_space_toggle {
     padding-left: calc($sidebar_width + 188px);
   }

@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Sidebar from "./components/layout/Sidebar";
@@ -12,11 +12,19 @@ import Footer from "./components/layout/Footer";
 import "./App.css";
 import Header from "./components/layout/Header";
 
+// Animation Library
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 const About = React.lazy(() => import("./pages/About"));
 
 const App = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
   return (
-
     <Router>
       <Sidebar />
       {/* <Header /> */}
@@ -35,8 +43,6 @@ const App = () => {
         <Footer />
       </div>
     </Router>
-
-
   );
 };
 

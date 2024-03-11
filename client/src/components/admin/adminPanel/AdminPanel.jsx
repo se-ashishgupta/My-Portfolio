@@ -109,9 +109,8 @@ const AdminPanel = () => {
     <>
       <div className="adminpanel_container">
         <div
-          className={`adminpanel_content ${
-            show ? "navbar_space_toggle" : null
-          }`}
+          className={`adminpanel_content ${show ? "navbar_space_toggle" : null
+            }`}
         >
           <div
             className={`topbar_header ${show ? "navbar_space_toggle" : null}`}
@@ -132,9 +131,8 @@ const AdminPanel = () => {
                 onMouseLeave={() => setTopBarshow(false)}
               />
               <div
-                className={`topbarWrapMenu ${
-                  topBarshow ? "topbarWrapMenuOpen" : null
-                }`}
+                className={`topbarWrapMenu ${topBarshow ? "topbarWrapMenuOpen" : null
+                  }`}
                 onMouseOver={() => setTopBarshow(true)}
                 onMouseLeave={() => setTopBarshow(false)}
               >
@@ -166,6 +164,8 @@ const AdminPanel = () => {
               </div>
             </div>
           </div>
+
+
           <div className={`sidebar ${show ? "slider" : null}`}>
             <div className="navbar_content">
               <div>
